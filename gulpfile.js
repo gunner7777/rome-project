@@ -22,8 +22,8 @@ const stylePath = [normalizeCss, scssIn];
 const scssOut = "./build/css";
 const jsIn = "./src/js/*.js";
 const jsOut = "./build/js";
-const pugIn = "src/views/*.pug";
-const pugWatch = "src/views/**/*.pug";
+const pugIn = "src/pages/*.pug";
+const pugWatch = "src/pages/**/*.pug";
 const pugOut = "./build";
 const imageIn = "./src/images/*";
 const imageOut = "./build/images";
@@ -63,7 +63,6 @@ function html() {
         pretty: true,
       })
     )
-    .pipe(rename("index.html"))
     .pipe(gulp.dest(pugOut))
     .pipe(browserSync.stream());
 }
