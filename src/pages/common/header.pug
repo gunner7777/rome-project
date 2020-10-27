@@ -1,15 +1,19 @@
 .Header-Outer
   .Header.Block
-    a(href="/").Logo.Col9
+    a(href="/").Logo.Col5
       .Logo-Img
         img(src="./images/logo.png", alt="Логотип")
       .Logo-Title
         p Вятская ГСХА
-    .LandingNav.Col2
-      ul
-        li
+    nav.LandingNav-Outer.Col5
+      ul.LandingNav
+        li.LandingNav-Item
+          a(href="#", data-to-block-id="toshow").LandingNav-Link.Text_Uppercase Экскурсия
+        li.LandingNav-Item
+          a(href="#", data-to-block-id="toshow").LandingNav-Link.Text_Uppercase Стрим ректора
+        li.LandingNav-Item
           a(href="#", data-to-block-id="toshow").LandingNav-Link.Text_Uppercase На концерт
-    .Menu-Outer.Col1
+    .Menu-Outer.Col2
       button.Menu-Button
         img(src="./images/mobile_menu.svg", alt="Кнопка меню")
       ul.Menu

@@ -1,4 +1,16 @@
 .LandingNav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  &-Item {
+    margin-right: 15px;
+
+    &:last-child() {
+      margin-right: 0;
+    }
+  }
+
   &-Link {
     color: $secondary-text;
     font-size: 1.2rem;

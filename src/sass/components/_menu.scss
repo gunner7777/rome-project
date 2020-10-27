@@ -1,11 +1,17 @@
 .Menu {
   display: none;
 
+  &-Outer {
+    position: relative;
+  }
+
   &-Button {
+    position: relative;
     border: none;
     background-color: transparent;
     border-radius: 10px;
     width: 45px;
+    right: 0;
     cursor: pointer;
   }
 }
