@@ -1,10 +1,10 @@
 .LandingNav {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-end;
 
   &-Item {
-    margin-right: 15px;
+    margin-right: 25px;
 
     &:last-child() {
       margin-right: 0;
@@ -12,7 +12,9 @@
   }
 
   &-Link {
-    color: $secondary-text;
+    //color: $secondary-text;
+    font-family: "Montserrat", sans-serif;
+    color: #fffff7;
     font-size: 1.2rem;
     transition: color 0.2s linear;
 

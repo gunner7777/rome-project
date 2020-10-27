@@ -1,0 +1,33 @@
+.LabsList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &-Item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    color: #222;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 48%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #faf6e3;
+    }
+  }
+
+  &-Img {
+    margin-right: 25px;
+    min-width: 90px;
+    width: 90px;
+  }
+  &-Title {
+    //color: #222;
+    font-size: 1.4rem;
+  }
+}

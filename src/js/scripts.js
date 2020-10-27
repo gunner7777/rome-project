@@ -1,12 +1,23 @@
+function TopscrollTo() {
+  if (window.scrollY != 0) {
+    setTimeout(function () {
+      window.scrollTo(0, window.scrollY - 300);
+      TopscrollTo();
+    }, 20);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  const firstBlock = document.querySelector(".MainBlock");
-  const firstBlockHeight = firstBlock.clientHeight;
+  const firstBlockHeight = 600;
+  const goToUp = document.querySelector(".GoToUp");
   const headerNode = document.querySelector(".Header-Outer");
 
-  fixedHeader(headerNode, firstBlockHeight);
+  fixedHeader(headerNode);
+  goToUpButton(goToUp, firstBlockHeight);
 
   window.addEventListener("scroll", function() {
-    fixedHeader(headerNode, firstBlockHeight);
+    fixedHeader(headerNode);
+    goToUpButton(goToUp, firstBlockHeight);
   });
 
   document.addEventListener("click", function (e) {
@@ -18,10 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function fixedHeader(h, fbh) {
-  if (pageYOffset > fbh - h.clientHeight) {
+function fixedHeader(h) {
+  if (pageYOffset > 10) {
     h.classList.add("Header_Fixed");
   } else {
     h.classList.remove("Header_Fixed");
+  }
+}
+
+function goToUpButton(gtu, fbh) {
+  if (pageYOffset > fbh) {
+    gtu.classList.add("GoToUp_Show");
+  } else {
+    gtu.classList.remove("GoToUp_Show");
   }
 }

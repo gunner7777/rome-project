@@ -1,0 +1,13 @@
+.Expo {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(../../images/vgsha_bg_1920.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-List {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

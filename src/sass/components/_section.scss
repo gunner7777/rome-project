@@ -1,17 +1,33 @@
 .Section {
-  padding: 30px 15px;
-  height: 100vh;
+  height: 100%;
+
+  &-Outer {
+    padding-top: 140px;
+    padding-bottom: 30px;
+    height: 100vh;
+
+    &_NotHeight {
+      height: auto;
+    }
+  }
 
   &-Title {
     text-align: center;
     font-size: 2.3rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
-    &_Concert {
+    &_Light {
+      color: #fff;
+    }
+    &_Dark {
+      color: #222;
+    }
+
+    /* &_Concert {
       color: $primary-text;
     }
     &_Lab {
       color: $secondary-text;
-    }
+    } */
   }
 }
