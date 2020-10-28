@@ -4,6 +4,7 @@
   &-Outer {
     padding-top: 140px;
     padding-bottom: 30px;
+    min-height: 100vh;
     height: 100vh;
 
     &_NotHeight {
@@ -17,7 +18,7 @@
     margin-bottom: 40px;
 
     &_Light {
-      color: #fff;
+      color: #fffff7;
     }
     &_Dark {
       color: #222;

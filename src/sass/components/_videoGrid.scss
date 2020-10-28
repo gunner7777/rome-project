@@ -9,16 +9,29 @@
   &-Item {
     position: relative;
     margin-bottom: 35px;
-    max-height: 500px;
-    height: 500px;
+    max-height: 550px;
+    height: 550px;
 
     iframe {
-      position: absolute;
+      position: relative;
       left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      //top: 50%;
+      //transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       width: 85%;
-      height: 100%;
+      height: 85%;
     }
+  }
+
+  &-Title {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fffff7;
+    margin-bottom: 30px;
+    font-size: 1.7rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fffff7;
   }
 }

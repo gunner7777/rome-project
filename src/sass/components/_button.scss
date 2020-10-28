@@ -1,0 +1,27 @@
+.Button {
+  //position: relative;
+  max-width: 280px;
+  border-radius: 3px;
+  border: none;
+  padding: 5px;
+  color: $secondary-text;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &_ModalClose {
+    //position: absolute;
+    width: 36px;
+    height: 36px;
+    //font-size: 1.2rem;
+    background-color: $accent-3;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(#c72c41, 0.8);
+    }
+
+    & > img {
+      pointer-events: none;
+    }
+  }
+}

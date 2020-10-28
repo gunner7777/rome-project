@@ -1,0 +1,95 @@
+.Modal {
+  position: absolute;
+  max-width: 1200px;
+  /* width: 400px; */
+  //width: 1000px;
+  width: 80%;
+  padding: 0 30px 30px;
+  background-color: #fffff7;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  max-height: 90vh;
+  //height: 70%;
+  height: 90%;
+
+  &-Outer {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($accent-1, 0.3);
+    z-index: 160;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+
+    &_Show {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  &-Message {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &-Title {
+    font-size: 1.4rem;
+    margin-bottom: 35px;
+    //line-height: 36px;
+  }
+
+  &-Content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+
+    iframe,
+    object {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-Header {
+    position: relative;
+    //position: fixed;
+    //position: sticky;
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start; */
+
+    /* height: 50px; */
+    padding: 15px 30px;
+    /*  background-color: $secondary-bg;
+    top: 0; */
+  }
+
+  &-Button {
+    position: absolute;
+    top: 7px;
+    right: -20px;
+  }
+
+  &_WithModalShow {
+    overflow: hidden;
+  }
+}
+
+/* @include mq-max(430px) {
+  .Modal {
+    width: 80%;
+  }
+}
+
+@include mq-max(300px) {
+  .Modal {
+    width: 90%;
+  }
+} */
