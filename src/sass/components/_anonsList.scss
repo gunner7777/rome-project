@@ -1,0 +1,91 @@
+.AnonsList {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  //align-items: center;
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 35%;
+  transform: translateY(-50%);
+  //outline: 1px solid red;
+
+  &-Date {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 40%;
+    //background-color: green;
+  }
+
+  &-FullAnons {
+    width: 58%;
+  }
+
+  &-Item {
+    position: relative;
+    background-color: #fff0d6;
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &_Selected,
+    &:hover {
+      background-color: #d04e5e;
+      color: #fff;
+    }
+  }
+
+  &-Text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1.2rem;
+  }
+
+  &-Info {
+    display: none;
+  }
+
+  &-EventDate {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  &-Event {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  &-Time {
+    min-width: 140px;
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+
+  &-Description {
+    font-size: 1.2rem;
+
+    & > p {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -79,14 +79,8 @@ const BadgesInfo = [
   }
 ];
 
-function TopscrollTo() {
-  if (window.scrollY != 0) {
-    setTimeout(function () {
-      window.scrollTo(0, window.scrollY - 300);
-      TopscrollTo();
-    }, 20);
-  }
-}
+const dateArr = ['30', '2', '3', '5', '6', '10'];
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const firstBlockHeight = 600;
@@ -100,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fixedHeader(headerNode);
     goToUpButton(goToUp, firstBlockHeight);
   });
+
+  showActualAnons();
 
   document.addEventListener("click", function (e) {
     if(e.target.classList.contains("LandingNav-Link")) {
@@ -138,6 +134,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function TopscrollTo() {
+  if (window.scrollY != 0) {
+    setTimeout(function () {
+      window.scrollTo(0, window.scrollY - 300);
+      TopscrollTo();
+    }, 20);
+  }
+}
 
 function fixedHeader(h) {
   if (pageYOffset > 10) {
@@ -186,4 +191,17 @@ function modalInfoUpdate(currEl, titleNode, contentNode) {
 function modalClear() {
   document.querySelector('.Modal-Title').innerHTML = "";
   document.querySelector('.Modal-Content').innerHTML = "";
+}
+
+function showActualAnons(date='30') {
+  const fullAnons = document.querySelector('.AnonsList-FullAnons');
+  const anonses = document.querySelectorAll('.AnonsList-Item');
+  anonses.forEach(anons => {
+    anons.classList.remove('AnonsList-Item_Selected');
+
+    if(anons.dataset.eventDate === date) {
+      anons.classList.add('AnonsList-Item_Selected');
+      fullAnons.innerHTML = anons.nextElementSibling.innerHTML;
+    }
+  });
 }
