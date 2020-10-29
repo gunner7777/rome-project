@@ -5,21 +5,21 @@
 
   &-Item {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    background-color: #fff;
+    background-color: #faf6e3;
     color: #222;
-    border: 2px solid #faf6e3;
+    border: 2px solid #fff;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
-    width: 48%;
+    width: 30%;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #faf6e3;
-      border: 2px solid #fff;
+      background-color: #fff;
+      //border: 2px solid #fff;
     }
   }
 
@@ -29,12 +29,21 @@
   }
 
   &-Img {
+    position: relative;
     margin-right: 25px;
     min-width: 90px;
     width: 90px;
+    height: 120px;
+
+    img {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   &-Title {
-    //color: #222;
+    margin-top: 10px;
     font-size: 1.4rem;
   }
 }

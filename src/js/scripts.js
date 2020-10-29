@@ -64,19 +64,50 @@ const LabsInfo = [
 const BadgesInfo = [
   {
     id: 'b0001',
-    name: 'Награды правительства',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/academy/docs/Pril1_akkred_03.09.2015.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    name: 'Министерство сельского хозяйства Российской федерации',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
   },
   {
     id: 'b0002',
-    name: 'Награды минсельхоза',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/academy/docs/Pril1_akkred_03.09.2015.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    name: 'Законодательное собрание Кировской области',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/zak_sobranie.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
   },
   {
     id: 'b0003',
-    name: 'Награды академии',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/academy/docs/Pril1_akkred_03.09.2015.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    name: 'Кировский молочный комбинат',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+  },
+  {
+    id: 'b0004',
+    name: 'Комитет по аграрно-производственной политике и природопользованию Совета Федерации РФ',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+  },
+  {
+    id: 'b0005',
+    name: 'Кировская городская Дума',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/kirov_duma.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+  },
+  {
+    id: 'b0006',
+    name: 'Администрация муниципального образования "город Киров"',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/gorod_kirov.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+  },
+  {
+    id: 'b0007',
+    name: 'Министерство сельского хозяйства и продовольствия Кировской области',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/minselhoz.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+  },
+  {
+    id: 'b0008',
+    name: 'Правительство Кировской области',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/pravitelstvo_ko.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+  },
+  {
+    id: 'b0009',
+    name: 'Территориальное управление по Ленинскому району города Киров',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/leninsk_territ.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
   }
+
 ];
 
 const dateArr = ['30', '2', '3', '5', '6', '10'];
@@ -95,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     goToUpButton(goToUp, firstBlockHeight);
   });
 
+  /** init */
   showActualAnons();
 
   document.addEventListener("click", function (e) {
@@ -131,6 +163,10 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       document.body.classList.remove('Modal_WithModalShow');
       modalClear();
+    }
+
+    if(e.target.classList.contains('AnonsList-Item')) {
+      getAnonsFullInfo(e.target);
     }
   });
 });
@@ -193,11 +229,12 @@ function modalClear() {
   document.querySelector('.Modal-Content').innerHTML = "";
 }
 
+/* anons init after reload page */
 function showActualAnons(date='30') {
   const fullAnons = document.querySelector('.AnonsList-FullAnons');
   const anonses = document.querySelectorAll('.AnonsList-Item');
   anonses.forEach(anons => {
-    anons.classList.remove('AnonsList-Item_Selected');
+    //anons.classList.remove('AnonsList-Item_Selected');
 
     if(anons.dataset.eventDate === date) {
       anons.classList.add('AnonsList-Item_Selected');
@@ -205,3 +242,14 @@ function showActualAnons(date='30') {
     }
   });
 }
+
+function getAnonsFullInfo(target) {
+  const fullAnons = document.querySelector('.AnonsList-FullAnons');
+  const anonses = document.querySelectorAll('.AnonsList-Item');
+  anonses.forEach(anons => {
+    anons.classList.remove('AnonsList-Item_Selected');
+  });
+  target.classList.add('AnonsList-Item_Selected');
+  fullAnons.innerHTML = target.nextElementSibling.innerHTML;
+}
+

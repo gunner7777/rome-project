@@ -12,7 +12,8 @@
     max-height: 550px;
     height: 550px;
 
-    iframe {
+    iframe,
+    div {
       position: relative;
       left: 50%;
       //top: 50%;
@@ -20,6 +21,10 @@
       transform: translateX(-50%);
       width: 85%;
       height: 85%;
+    }
+
+    div {
+      overflow: hidden;
     }
   }
 
@@ -32,6 +37,6 @@
     margin-bottom: 30px;
     font-size: 1.7rem;
     padding-bottom: 5px;
-    border-bottom: 1px solid #fffff7;
+    //border-bottom: 1px solid #fffff7;
   }
 }
