@@ -1,0 +1,64 @@
+.SingleVideo {
+  position: relative;
+  height: 60vh;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+
+  &-Video {
+    height: 100%;
+
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@include mq-max(1100px) {
+  .SingleVideo {
+    width: 86%;
+  }
+}
+
+@include mq-max(975px) {
+  .SingleVideo {
+    height: 50vh;
+  }
+}
+
+@include mq-max(800px) {
+  .SingleVideo {
+    height: 41vh;
+  }
+}
+
+@include mq-max(683px) {
+  .SingleVideo {
+    height: 35vh;
+  }
+}
+
+@include mq-max(575px) {
+  .SingleVideo {
+    width: 95%;
+  }
+}
+
+@include mq-max(575px) {
+  .SingleVideo {
+    height: 29vh;
+  }
+}
+
+@include mq-max(400px) {
+  .SingleVideo {
+    height: 22vh;
+  }
+}
+
+@include mq-max(320px) {
+  .SingleVideo {
+    height: 18vh;
+  }
+}

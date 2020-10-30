@@ -1,0 +1,16 @@
+.Stream {
+  background-color: #ffffff;
+}
+
+@include mq-max(1100px) {
+  .Stream {
+    min-height: 100vh;
+  }
+}
+
+@include mq-max(991px) {
+  .Stream {
+    min-height: auto;
+    padding-bottom: 50px;
+  }
+}

@@ -274,6 +274,9 @@ const menuResetOnWindowResize = () => {
   document
     .querySelector(".Button-Menu")
     .classList.remove("MobileMenu-Button_Active");
+  if(document.body.classList.contains('Modal_WithModalShow')) {
+    document.body.classList.remove('Modal_WithModalShow');
+  }
   document.querySelector(".LandingNav").classList.remove("LandingNav_Show");
   document.querySelector(".BgForNav").classList.remove("BgForNav_Show");
 };

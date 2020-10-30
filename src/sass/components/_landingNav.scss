@@ -9,7 +9,7 @@
   }
 
   &-Item {
-    margin-right: 25px;
+    margin-right: 15px;
 
     &:last-child() {
       margin-right: 0;
@@ -28,19 +28,19 @@
   }
 }
 
-@include mq-max(1799px) {
+/* @include mq-max(1799px) {
   .LandingNav {
     &-Item {
       margin-right: 20px;
     }
   }
-}
+} */
 
-@include mq-max(1668px) {
+@include mq-max(1746px) {
   .LandingNav {
-    &-Item {
+    /* &-Item {
       margin-right: 15px;
-    }
+    } */
 
     &-Link {
       font-size: 1.1rem;
@@ -48,7 +48,7 @@
   }
 }
 
-@include mq-max(1505px) {
+@include mq-max(1617px) {
   .LandingNav {
     &-Link {
       font-size: 1rem;
@@ -56,7 +56,7 @@
   }
 }
 
-@include mq-max(1378px) {
+@include mq-max(1489px) {
   .LandingNav {
     display: none;
     opacity: 0;
