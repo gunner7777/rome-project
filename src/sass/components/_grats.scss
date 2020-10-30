@@ -1,3 +1,9 @@
 .Grats {
-  //background-color: #faf6e3;
+  &-Img {
+    cursor: pointer;
+
+    & > img {
+      pointer-events: none;
+    }
+  }
 }

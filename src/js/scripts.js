@@ -75,47 +75,47 @@ const BadgesInfo = [
   {
     id: 'b0001',
     name: 'Министерство сельского хозяйства Российской федерации',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Информация скоро появится</p></embed></object>'
   },
   {
     id: 'b0002',
     name: 'Законодательное собрание Кировской области',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/zak_sobranie.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/zak_sobranie.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/zak_sobranie.pdf" type="application/pdf"/></object>'
   },
   {
     id: 'b0003',
     name: 'Кировский молочный комбинат',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Информация скоро появится</p></embed></object>'
   },
   {
     id: 'b0004',
     name: 'Комитет по аграрно-производственной политике и природопользованию Совета Федерации РФ',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Информация скоро появится</p></embed></object>'
   },
   {
     id: 'b0005',
     name: 'Кировская городская Дума',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/kirov_duma.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/kirov_duma.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/kirov_duma.pdf" type="application/pdf"/></object>'
   },
   {
     id: 'b0006',
     name: 'Администрация муниципального образования "город Киров"',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/gorod_kirov.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/gorod_kirov.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/gorod_kirov.pdf" type="application/pdf"/></object>'
   },
   {
     id: 'b0007',
     name: 'Министерство сельского хозяйства и продовольствия Кировской области',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/minselhoz.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/minselhoz.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/minselhoz.pdf" type="application/pdf"/></object>'
   },
   {
     id: 'b0008',
     name: 'Правительство Кировской области',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/pravitelstvo_ko.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/pravitelstvo_ko.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/pravitelstvo_ko.pdf" type="application/pdf"/></object>'
   },
   {
     id: 'b0009',
     name: 'Территориальное управление по Ленинскому району города Киров',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/leninsk_territ.pdf" type="application/pdf"><p>Не удалось отобразить файл</p></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/leninsk_territ.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/leninsk_territ.pdf" type="application/pdf"/></object>'
   }
 
 ];
@@ -189,6 +189,12 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".LandingNav").classList.toggle("LandingNav_Show");
       document.body.classList.toggle('Modal_WithModalShow');
     }
+
+    if(e.target.classList.contains('Grats-Img')) {
+      document.querySelector(".Modal-Outer").classList.add("Modal-Outer_Show");
+      document.body.classList.add('Modal_WithModalShow');
+      modalShowImg(e.target, document.querySelector('.Modal-Title'), document.querySelector('.Modal-Content'));
+    }
   });
 });
 
@@ -230,6 +236,11 @@ function modalInfoUpdate(currEl, titleNode, contentNode) {
   //console.log('currEl[0].code', currEl[0].code);
   titleNode.innerHTML = currEl[0].name;
   contentNode.innerHTML = currEl[0].code;
+}
+
+function modalShowImg(imageNode, titleNode, contentNode) {
+  titleNode.innerHTML = "Поздравление";
+  contentNode.innerHTML = imageNode.innerHTML;
 }
 
 function modalClear() {
