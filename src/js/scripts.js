@@ -116,6 +116,11 @@ const BadgesInfo = [
     id: 'b0009',
     name: 'Территориальное управление по Ленинскому району города Киров',
     code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/leninsk_territ.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/leninsk_territ.pdf" type="application/pdf"/></object>'
+  },
+  {
+    id: 'b0010',
+    name: 'ФГБОУ ВО Вятская ГСХА',
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/vgsha.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/vgsha.pdf" type="application/pdf"/></object>'
   }
 
 ];
