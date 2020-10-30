@@ -2,6 +2,9 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 
   &-Item {
     display: flex;
@@ -33,5 +36,91 @@
   }
   &-Title {
     font-size: 1.4rem;
+  }
+}
+
+@include mq-max(1500px) {
+  .LabsList {
+    width: 95%;
+  }
+}
+
+@include mq-max(1200px) {
+  .LabsList {
+    &-Title {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .LabsList {
+    width: 98%;
+    &-Title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(832px) {
+  .LabsList {
+    &-Title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include mq-max(790px) {
+  .LabsList {
+    &-Img {
+      margin-right: 15px;
+      min-width: 70px;
+      width: 70px;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .LabsList {
+    &-Item {
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-Img {
+      margin-right: 0;
+    }
+
+    &-Title {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .LabsList {
+    &-Title {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq-max(475px) {
+  .LabsList {
+    &-Item {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+@include mq-max(400px) {
+  .LabsList {
+    &-Item {
+      width: 95%;
+    }
   }
 }

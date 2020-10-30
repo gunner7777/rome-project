@@ -1,11 +1,11 @@
 .Header-Outer.Container_Wide
   .Header.Block.Container
-    a(href="/").Logo.Col4
+    a(href="/").Logo
       .Logo-Img
         img(src="./images/logo.png", alt="Логотип")
       .Logo-Title
         p 90-летие Вятской ГСХА
-    nav.LandingNav-Outer.Col8
+    nav.LandingNav-Outer
       ul.LandingNav
         li.LandingNav-Item
           a(href="#", data-to-block-id="about").LandingNav-Link.Text_Uppercase Фильм
@@ -21,8 +21,11 @@
           a(href="#", data-to-block-id="badges").LandingNav-Link.Text_Uppercase Награды
         li.LandingNav-Item
           a(href="#", data-to-block-id="grats").LandingNav-Link.Text_Uppercase Поздравления
+      .BgForNav
+      button.Button-Menu
+        <svg viewBox="0 -53 384 384" xmlns="http://www.w3.org/2000/svg"><path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/></svg>
     //.Menu-Outer.Col2
-      button.Menu-Button
+      button.Button-Menu
         img(src="./images/mobile_menu.svg", alt="Кнопка меню")
       ul.Menu
         li.Menu-Item

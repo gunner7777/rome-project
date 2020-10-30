@@ -23,12 +23,57 @@
     &_Dark {
       color: #222;
     }
+  }
+}
 
-    /* &_Concert {
-      color: $primary-text;
+@include mq-max(1500px) {
+  .Section {
+    &-Title {
+      font-size: 2.1rem;
     }
-    &_Lab {
-      color: $secondary-text;
-    } */
+  }
+}
+
+@include mq-max(1340px) {
+  .Section {
+    &-Title {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .Section {
+    &-Outer {
+      min-height: 0;
+      height: auto;
+    }
+    &-Title {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .Section {
+    &-Title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Section {
+    &-Title {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include mq-max(400px) {
+  .Section {
+    &-Title {
+      font-size: 1.2rem;
+    }
   }
 }

@@ -3,6 +3,11 @@
   flex-flow: row wrap;
   justify-content: flex-end;
 
+  &-Outer {
+    position: relative;
+    width: 68%;
+  }
+
   &-Item {
     margin-right: 25px;
 
@@ -12,7 +17,6 @@
   }
 
   &-Link {
-    //color: $secondary-text;
     font-family: "Montserrat", sans-serif;
     color: #fffff7;
     font-size: 1.2rem;
@@ -20,6 +24,114 @@
 
     &:hover {
       color: $accent-3;
+    }
+  }
+}
+
+@include mq-max(1799px) {
+  .LandingNav {
+    &-Item {
+      margin-right: 20px;
+    }
+  }
+}
+
+@include mq-max(1668px) {
+  .LandingNav {
+    &-Item {
+      margin-right: 15px;
+    }
+
+    &-Link {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include mq-max(1505px) {
+  .LandingNav {
+    &-Link {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq-max(1378px) {
+  .LandingNav {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+    right: 20px;
+    position: absolute;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 42px;
+    right: 10px;
+    width: 400px;
+    padding: 10px;
+    background-color: #fffff7;
+    box-shadow: 0px 3px 8px 0px rgba(#222, 0.2);
+
+    &_Show {
+      display: block;
+      right: 0;
+      opacity: 1;
+      z-index: 161;
+    }
+
+    &-Outer {
+      width: 48%;
+    }
+
+    &-Item {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &-Link {
+      font-size: 1.1rem;
+      color: #222;
+      display: block;
+      text-align: center;
+      padding-bottom: 9px;
+      padding-top: 9px;
+    }
+  }
+}
+
+@include mq-max(601px) {
+  .LandingNav {
+    &-Outer {
+      width: 38%;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .LandingNav {
+    width: 300px;
+
+    &-Link {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq-max(470px) {
+  .LandingNav {
+    &-Outer {
+      width: 28%;
+    }
+  }
+}
+
+@include mq-max(340px) {
+  .LandingNav {
+    width: 220px;
+
+    &-Link {
+      font-size: 0.9rem;
     }
   }
 }

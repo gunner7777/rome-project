@@ -1,5 +1,4 @@
 .Button {
-  //position: relative;
   max-width: 280px;
   border-radius: 3px;
   border: none;
@@ -9,10 +8,8 @@
   cursor: pointer;
 
   &_ModalClose {
-    //position: absolute;
     width: 36px;
     height: 36px;
-    //font-size: 1.2rem;
     background-color: $accent-3;
     transition: background-color 0.2s ease;
 
@@ -22,6 +19,41 @@
 
     & > img {
       pointer-events: none;
+    }
+  }
+
+  &-Menu {
+    display: none;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 48px;
+    left: 0;
+    cursor: pointer;
+
+    & > svg {
+      pointer-events: none;
+      fill: #fff;
+    }
+  }
+}
+
+@include mq-max(1378px) {
+  .Button {
+    &-Menu {
+      display: block;
+      left: 100%;
+      transform: translateX(-100%);
+      z-index: 161;
+    }
+  }
+}
+
+@include mq-max(410px) {
+  .Button {
+    &-Menu {
+      width: 40px;
     }
   }
 }

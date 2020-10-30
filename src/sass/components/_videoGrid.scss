@@ -8,17 +8,17 @@
 
   &-Item {
     position: relative;
-    margin-bottom: 35px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    //margin-bottom: 35px;
     max-height: 550px;
     height: 550px;
 
     iframe,
     div {
       position: relative;
-      left: 50%;
-      //top: 50%;
-      //transform: translate(-50%, -50%);
-      transform: translateX(-50%);
       width: 85%;
       height: 85%;
     }
@@ -29,14 +29,163 @@
   }
 
   &-Title {
-    display: inline-block;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     color: #fffff7;
     margin-bottom: 30px;
     font-size: 1.7rem;
     padding-bottom: 5px;
-    //border-bottom: 1px solid #fffff7;
+  }
+}
+
+@include mq-max(1500px) {
+  .VideoGrid {
+    &-Item {
+      height: 420px;
+
+      iframe,
+      div {
+        width: 93%;
+        height: 85%;
+      }
+    }
+  }
+}
+
+@include mq-max(1300px) {
+  .VideoGrid {
+    &-Item {
+      iframe,
+      div {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mq-max(1200px) {
+  .VideoGrid {
+    &-Item {
+      //height: 520px;
+
+      iframe,
+      div {
+        //height: 63%;
+      }
+    }
+    &-Title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include mq-max(1100px) {
+  .VideoGrid {
+    &-Item {
+      height: 500px;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .VideoGrid {
+    &_Center {
+      top: 0;
+      transform: translateY(0);
+    }
+
+    &-Item {
+      margin-bottom: 35px;
+      iframe,
+      div {
+        width: 85%;
+        height: 86%;
+      }
+    }
+
+    &-Title {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include mq-max(850px) {
+  .VideoGrid {
+    &-Item {
+      height: 420px;
+
+      iframe,
+      div {
+        width: 85%;
+        height: 82%;
+      }
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .VideoGrid {
+    &-Item {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@include mq-max(640px) {
+  .VideoGrid {
+    &-Item {
+      iframe,
+      div {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .VideoGrid {
+    &-Item {
+      height: 330px;
+      margin-bottom: 20px;
+
+      iframe,
+      div {
+        width: 95%;
+      }
+    }
+    &-Title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include mq-max(450px) {
+  .VideoGrid {
+    &-Item {
+      height: 300px;
+      margin-bottom: 15px;
+    }
+    &-Title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include mq-max(380px) {
+  .VideoGrid {
+    &-Item {
+      height: 240px;
+    }
+    &-Title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include mq-max(320px) {
+  .VideoGrid {
+    &-Item {
+      height: 220px;
+    }
   }
 }

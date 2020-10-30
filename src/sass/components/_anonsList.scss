@@ -2,14 +2,12 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  //align-items: center;
   position: relative;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   top: 35%;
   transform: translateY(-50%);
-  //outline: 1px solid red;
 
   &-Date {
     display: flex;
@@ -17,7 +15,6 @@
     justify-content: center;
     width: 40%;
     align-items: center;
-    //background-color: green;
   }
 
   &-FullAnons {
@@ -87,6 +84,140 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+@include mq-max(1200px) {
+  .AnonsList {
+    width: 95%;
+  }
+}
+
+@include mq-max(991px) {
+  .AnonsList {
+    top: 0;
+    transform: translateY(0);
+  }
+}
+
+@include mq-max(890px) {
+  .AnonsList {
+    flex-direction: column;
+    &-Date,
+    &-FullAnons {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    &-Date {
+      width: 70%;
+      margin-bottom: 20px;
+    }
+
+    &-FullAnons {
+      width: 90%;
+    }
+  }
+}
+
+@include mq-max(751px) {
+  .AnonsList {
+    &-Date {
+      width: 90%;
+    }
+
+    &-FullAnons {
+      width: 95%;
+    }
+    &-Time {
+      min-width: 125px;
+    }
+
+    &-Description,
+    &-Time {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include mq-max(591px) {
+  .AnonsList {
+    &-Date {
+      width: 95%;
+    }
+
+    &-EventDate {
+      font-size: 1.1rem;
+    }
+    &-Text {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include mq-max(500px) {
+  .AnonsList {
+    &-Time {
+      min-width: 112px;
+    }
+
+    &-Description,
+    &-Time {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq-max(480px) {
+  .AnonsList {
+    &-Item {
+      width: 120px;
+      height: 120px;
+      margin-right: 7px;
+      margin-bottom: 7px;
+    }
+    &-Text {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq-max(420px) {
+  .AnonsList {
+    &-Event {
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    &-Time {
+      margin-bottom: 15px;
+    }
+    &-Description {
+      text-align: center;
+    }
+  }
+}
+
+@include mq-max(350px) {
+  .AnonsList {
+    width: 100%;
+
+    &-Date {
+      width: 100%;
+    }
+
+    &-Item {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@include mq-max(244px) {
+  .AnonsList {
+    &-Item {
+      width: 95px;
+      height: 95px;
     }
   }
 }

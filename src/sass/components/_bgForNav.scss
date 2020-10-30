@@ -1,0 +1,17 @@
+.BgForNav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($accent-1, 0.3);
+  z-index: 160;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+
+  &_Show {
+    display: block;
+    opacity: 1;
+  }
+}

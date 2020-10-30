@@ -19,7 +19,6 @@
 
     &:hover {
       background-color: #fff;
-      //border: 2px solid #fff;
     }
   }
 
@@ -30,7 +29,6 @@
 
   &-Img {
     position: relative;
-    margin-right: 25px;
     min-width: 90px;
     width: 90px;
     height: 120px;
@@ -45,5 +43,129 @@
   &-Title {
     margin-top: 10px;
     font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+@include mq-max(1889px) {
+  .BadgesList {
+    &-Img {
+      min-width: 70px;
+      width: 70px;
+      height: 90px;
+    }
+  }
+}
+
+@include mq-max(1498px) {
+  .BadgesList {
+    &-Title {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include mq-max(1330px) {
+  .BadgesList {
+    &-Item {
+      width: 32%;
+    }
+  }
+}
+
+@include mq-max(1210px) {
+  .BadgesList {
+    &-Title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .BadgesList {
+    &-Title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .BadgesList {
+    justify-content: center;
+
+    &-Item {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 45%;
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+
+    &-Img {
+      margin-right: 15px;
+    }
+
+    &-Title {
+      font-size: 1rem;
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+}
+
+@include mq-max(660px) {
+  .BadgesList {
+    &-Img {
+      min-width: 50px;
+      width: 50px;
+      height: 90px;
+    }
+  }
+}
+
+@include mq-max(615px) {
+  .BadgesList {
+    &-Img {
+      display: none;
+    }
+
+    &-Title {
+      text-align: center;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .BadgesList {
+    &-Img {
+      display: block;
+      margin-right: 20px;
+    }
+
+    &-Item {
+      width: 90%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    &-Title {
+      text-align: left;
+    }
+  }
+}
+
+@include mq-max(380px) {
+  .BadgesList {
+    &-Item {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 95%;
+    }
+
+    &-Title {
+      margin-top: 10px;
+      text-align: center;
+    }
   }
 }

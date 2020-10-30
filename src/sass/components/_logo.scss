@@ -3,17 +3,126 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  width: 30%;
+  margin-right: 15px;
 
   &-Img {
     margin-right: 20px;
+    min-width: 80px;
     width: 90px;
   }
 
   &-Title {
     font-family: "Montserrat", sans-serif;
-    //color: $secondary-text;
     color: #fffff7;
-    //color: #f9fafc;
     font-size: 2.1rem;
+  }
+}
+
+@include mq-max(1738px) {
+  .Logo {
+    &-Title {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+@include mq-max(1609px) {
+  .Logo {
+    &-Img {
+      margin-right: 15px;
+    }
+
+    &-Title {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@include mq-max(1378px) {
+  .Logo {
+    width: 50%;
+
+    &-Title {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+@include mq-max(1006px) {
+  .Logo {
+    margin-right: 0;
+
+    &-Title {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .Logo {
+    &-Title {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@include mq-max(601px) {
+  .Logo {
+    width: 60%;
+
+    &-Img {
+      min-width: 80px;
+    }
+    &-Title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include mq-max(470px) {
+  .Logo {
+    width: 70%;
+  }
+}
+
+@include mq-max(410px) {
+  .Logo {
+    &-Img {
+      min-width: 70px;
+    }
+    &-Title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include mq-max(377px) {
+  .Logo {
+    &-Img {
+      min-width: 60px;
+    }
+    &-Title {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include mq-max(365px) {
+  .Logo {
+    &-Img {
+      min-width: 50px;
+    }
+  }
+}
+
+@include mq-max(365px) {
+  .Logo {
+    &-Img {
+      display: none;
+    }
+    &-Title {
+      font-size: 1.2rem;
+    }
   }
 }
