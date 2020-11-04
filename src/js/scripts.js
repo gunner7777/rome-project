@@ -201,6 +201,8 @@ document.addEventListener("DOMContentLoaded", function () {
       modalShowImg(e.target, document.querySelector('.Modal-Title'), document.querySelector('.Modal-Content'));
     }
   });
+
+  findVideos();
 });
 
 function TopscrollTo() {
@@ -285,4 +287,63 @@ const menuResetOnWindowResize = () => {
   document.querySelector(".LandingNav").classList.remove("LandingNav_Show");
   document.querySelector(".BgForNav").classList.remove("BgForNav_Show");
 };
+
+function findVideos() {
+  let videos = document.querySelectorAll('.YtVideo');
+
+  for (let i = 0; i < videos.length; i++) {
+      setupVideo(videos[i]);
+      console.log('object', videos[i]);
+  }
+}
+
+function setupVideo(video) {
+  let link = video.querySelector('.YtVideo-Link');
+  let media = video.querySelector('.YtVideo-Media');
+  let button = video.querySelector('.YtVideo-Button');
+  let videoTitle = video.querySelector('.YtVideo-VideoTitle');
+  let id = parseMediaURL(media);
+
+  video.addEventListener('click', () => {
+      let iframe = createIframe(id);
+
+      link.remove();
+      button.remove();
+      videoTitle.remove();
+      video.appendChild(iframe);
+  });
+
+  link.removeAttribute('href');
+  video.classList.add('YtVideo_Enabled');
+}
+
+function parseMediaURL(media) {
+  let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+  if(media.src.indexOf("sddefault") !== -1) {
+    regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/sddefault\.jpg/i;
+  } else if(media.src.indexOf("hqdefault") !== -1) {
+    regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
+  }
+  let url = media.src;
+  let match = url.match(regexp);
+
+  return match[1];
+}
+
+function createIframe(id) {
+  let iframe = document.createElement('iframe');
+
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('allow', 'autoplay');
+  iframe.setAttribute('src', generateURL(id));
+  iframe.classList.add('YtVideo-Media');
+
+  return iframe;
+}
+
+function generateURL(id) {
+  let query = '?rel=0&showinfo=0&autoplay=1';
+
+  return 'https://www.youtube.com/embed/' + id + query;
+}
 

@@ -77,3 +77,11 @@
     }
   }
 }
+
+@include mq-max(367px) {
+  .Section {
+    &-Outer {
+      padding-top: 100px;
+    }
+  }
+}

@@ -1,26 +1,68 @@
 .SingleVideo {
-  position: relative;
+  /* position: relative;
   height: 60vh;
   width: 80%;
   margin-right: auto;
+  margin-left: auto; */
+  position: relative;
+  //width: 62.88%;
+  width: 57.88%;
+  height: 0;
+  //padding-bottom: 40.37%;
+  padding-bottom: 35.37%;
+  background-color: #222;
+  margin-right: auto;
   margin-left: auto;
+  margin-bottom: 30px;
 
-  &-Video {
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    border: none;
+  }
+
+  /* &-Video {
+    position: relative;
+    width: 90%;
+    height: 0;
+    padding-bottom: 50.62%;
+    background-color: #222;
 
     iframe {
-      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      border: none;
     }
+  }*/
+}
+
+@include mq-max(1500px) {
+  .SingleVideo {
+    width: 70%;
+    padding-bottom: 39.37%;
   }
 }
 
 @include mq-max(1100px) {
   .SingleVideo {
-    width: 86%;
+    width: 80%;
+    padding-bottom: 44.99%;
   }
 }
 
+@include mq-max(1100px) {
+  .SingleVideo {
+    width: 85%;
+    padding-bottom: 47.81%;
+  }
+}
+/*
 @include mq-max(975px) {
   .SingleVideo {
     height: 50vh;
@@ -61,4 +103,4 @@
   .SingleVideo {
     height: 18vh;
   }
-}
+} */

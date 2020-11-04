@@ -27,7 +27,7 @@
   }
 }
 
-@include mq-max(450px) {
+/* @include mq-max(450px) {
   .VideoGrid {
     &-Item {
       height: 300px;
@@ -38,4 +38,4 @@
       margin-bottom: 10px;
     }
   }
-}
+} */

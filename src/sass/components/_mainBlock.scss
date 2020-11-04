@@ -1,8 +1,50 @@
 .MainBlock {
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-    url(../../images/vgsha_bg_1920.jpg);
+    url(../../images/vgsha_bg_2560.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@include mq-max(1920px) {
+  .MainBlock {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+      url(../../images/vgsha_bg_1920.jpg);
+  }
+}
+
+@include mq-max(1024px) {
+  .MainBlock {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+      url(../../images/vgsha_bg_1024.jpg);
+  }
+}
+
+@include mq-max(800px) {
+  .MainBlock {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+      url(../../images/vgsha_bg_800.jpg);
+  }
+}
+
+@include mq-max(640px) {
+  .MainBlock {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+      url(../../images/vgsha_bg_640.jpg);
+  }
+}
+
+@include mq-max(480px) {
+  .MainBlock {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+      url(../../images/vgsha_bg_480.jpg);
+  }
+}
+
+@include mq-max(320px) {
+  .MainBlock {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+      url(../../images/vgsha_bg_320.jpg);
+  }
 }
