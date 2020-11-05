@@ -90,7 +90,7 @@ const BadgesInfo = [
   {
     id: 'b0004',
     name: 'Комитет по аграрно-производственной политике и природопользованию Совета Федерации РФ',
-    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/" type="application/pdf"><p>Информация скоро появится</p></embed></object>'
+    code: '<object data="https://vgsha.info/wp-content/uploads/docs/nagrady/sovfed.pdf" type="application/pdf"><embed src="https://vgsha.info/wp-content/uploads/docs/nagrady/sovfed.pdf" type="application/pdf"><p>Информация скоро появится</p></embed></object>'
   },
   {
     id: 'b0005',
